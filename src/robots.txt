@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+User-agent: Google-Extended
+Allow: /
+Sitemap: https://your-coffee-demo.netlify.app/sitemap.xml
