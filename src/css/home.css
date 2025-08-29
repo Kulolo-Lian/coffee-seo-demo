@@ -1,0 +1,279 @@
+/* The Ultimate Coffee Guide - Home Page Styles */
+
+/* CSS Grid Layout System - Unique to Homepage */
+.hero {
+    display: grid;
+    place-items: center;
+    min-height: 55vh;
+    background: linear-gradient(135deg, var(--color-warm-white) 0%, var(--color-background-cozy) 100%);
+    color: var(--color-text-strong);
+    text-align: center;
+    padding: 5rem 2rem;
+    border-bottom: 1px solid var(--color-border-soft);
+}
+
+.hero-content h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--color-text-strong);
+    letter-spacing: -0.02em;
+    text-shadow: 0 1px 2px rgba(44, 24, 16, 0.1);
+}
+
+.hero-tagline {
+    font-size: clamp(1.125rem, 2.5vw, 1.25rem);
+    color: var(--color-text-medium);
+    max-width: 500px;
+    margin: 0 auto;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    line-height: 1.7;
+}
+
+/* Featured Articles Grid Layout */
+.featured-articles {
+    padding: 6rem 0;
+    background-color: var(--color-background);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.featured-articles h2 {
+    text-align: center;
+    margin-bottom: 3.5rem;
+    font-size: 2.25rem;
+    color: var(--color-text-strong);
+    font-weight: 600;
+    letter-spacing: -0.015em;
+}
+
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    align-items: start;
+}
+
+.featured-article {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    background: var(--color-warm-white);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(139, 90, 60, 0.08);
+    transition: all 0.3s ease;
+    border: 1px solid var(--color-border-soft);
+}
+
+.featured-article:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(139, 90, 60, 0.15);
+}
+
+.article-image {
+    aspect-ratio: 16/10;
+    overflow: hidden;
+}
+
+.article-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.featured-article:hover .article-image img {
+    transform: scale(1.05);
+}
+
+.article-content {
+    padding: 2rem;
+}
+
+.article-content h3 {
+    margin-bottom: 1rem;
+    font-size: 1.375rem;
+    line-height: 1.4;
+}
+
+.article-content h3 a {
+    color: var(--color-text-strong);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 600;
+}
+
+.article-content h3 a:hover {
+    color: var(--color-primary);
+}
+
+.article-content p {
+    color: var(--color-text-medium);
+    line-height: 1.7;
+    margin: 0;
+    font-weight: 400;
+}
+
+/* Call to Action Section */
+.cta-section {
+    padding: 6rem 0;
+    background-color: var(--color-background-cozy);
+    text-align: center;
+}
+
+.cta-section h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: var(--color-text-strong);
+    font-weight: 600;
+    letter-spacing: -0.015em;
+}
+
+.cta-section p {
+    margin-bottom: 2rem;
+    color: var(--color-text-medium);
+    font-size: 1.125rem;
+    font-weight: 400;
+}
+
+.newsletter-form {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.newsletter-form input[type="email"] {
+    padding: 0.875rem 1.25rem;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: white;
+    transition: all 0.3s ease;
+    font-weight: 300;
+}
+
+.newsletter-form input[type="email"]:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(166, 124, 82, 0.1);
+}
+
+.newsletter-form button {
+    padding: 0.875rem 2rem;
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 400;
+}
+
+.newsletter-form button:hover {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-1px);
+}
+
+/* Quick Tips Aside */
+.quick-tips {
+    padding: 5rem 0;
+    background-color: var(--color-background-light);
+}
+
+.quick-tips h2 {
+    margin-bottom: 2.5rem;
+    text-align: center;
+    font-size: 1.875rem;
+    color: var(--color-text-strong);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+.quick-tips ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+}
+
+.quick-tips li {
+    padding: 1.75rem;
+    background-color: var(--color-warm-white);
+    border-left: 4px solid var(--color-primary);
+    border-radius: 12px;
+    line-height: 1.7;
+    color: var(--color-text-medium);
+    font-weight: 400;
+    box-shadow: 0 2px 8px rgba(139, 90, 60, 0.08);
+    transition: all 0.3s ease;
+}
+
+.quick-tips li:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(139, 90, 60, 0.12);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        min-height: 50vh;
+        padding: 1.5rem;
+    }
+    
+    .article-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .featured-articles {
+        padding: 2rem 0;
+    }
+    
+    .cta-section {
+        padding: 2rem 0;
+    }
+    
+    .newsletter-form {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+    
+    .quick-tips ul {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 0.75rem;
+    }
+    
+    .featured-article {
+        margin: 0 -0.75rem;
+    }
+}
+
+/* Utility Classes */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}

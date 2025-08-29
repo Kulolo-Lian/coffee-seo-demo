@@ -1,0 +1,184 @@
+/* The Ultimate Coffee Guide - Base Styles */
+
+:root {
+    --color-primary: #8b5a3c;
+    --color-primary-light: #c89664;
+    --color-primary-dark: #5d3a1f;
+    --color-background: #fefcf9;
+    --color-background-light: #fdf8f3;
+    --color-background-warm: #f9f3ec;
+    --color-background-cozy: #f5ede4;
+    --color-text: #2c1810;
+    --color-text-strong: #1a0f08;
+    --color-text-medium: #4a3728;
+    --color-text-light: #6b5b4f;
+    --color-text-muted: #8b7d6f;
+    --color-border: #e8ddd4;
+    --color-border-soft: #f0e6dd;
+    --color-accent: #d4a574;
+    --color-cream: #faf8f5;
+    --color-warm-white: #fffefd;
+    
+    --font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --font-family-heading: Georgia, 'Times New Roman', serif;
+    
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    --spacing-xxl: 4rem;
+    
+    --border-radius: 6px;
+    --border-radius-lg: 12px;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Reset and Base Styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family-base);
+    line-height: 1.6;
+    color: var(--color-text);
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-background);
+    font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-heading);
+    font-weight: 600;
+    line-height: 1.3;
+    margin: 0 0 var(--spacing-sm) 0;
+    color: var(--color-text-strong);
+}
+
+h1 {
+    font-weight: 700;
+    color: var(--color-text-strong);
+    letter-spacing: -0.015em;
+}
+
+h2 {
+    font-weight: 600;
+    color: var(--color-text-strong);
+}
+
+h3 {
+    font-weight: 600;
+    color: var(--color-text-medium);
+}
+
+p {
+    margin: 0 0 var(--spacing-sm) 0;
+    color: var(--color-text-medium);
+    font-weight: 400;
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-accent);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Header and Navigation */
+header {
+    background-color: white;
+    box-shadow: var(--shadow-sm);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-sm);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: var(--spacing-lg);
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: var(--spacing-lg);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: var(--color-text);
+    font-weight: 500;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a[aria-current="page"] {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+/* Main Content */
+main {
+    min-height: calc(100vh - 200px);
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-primary-dark);
+    color: white;
+    text-align: center;
+    padding: var(--spacing-lg) 0;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+    opacity: 0.8;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    .nav-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: var(--spacing-sm);
+    }
+    
+    .nav-links {
+        justify-content: center;
+        gap: var(--spacing-md);
+    }
+    
+    .nav-links a {
+        padding: var(--spacing-xs);
+        font-size: 0.9rem;
+    }
+}
