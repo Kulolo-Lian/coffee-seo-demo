@@ -15,7 +15,9 @@ export default defineConfig({
         brew: resolve(__dirname, 'src/how-to-brew-coffee.html'),
         faqs: resolve(__dirname, 'src/coffee-faqs.html')
       }
-    }
+    },
+    // 添加：确保 _redirects 文件被复制到 dist 目录
+    copyPublicDir: true
   },
   
   // 3. 添加 plugins 部分，配置图片压缩
